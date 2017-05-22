@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+	    
+	    
+	        
+	    
+	    
+	    <package name="default" namespace="/" extends="struts-default">
+	      <action name="login" class="com.bmpl.sessiondemo.LoginAction">
+	      <result name="success">/welcome.jsp</result>
+	      </action>
+	      <action name="addAction" class="com.bmpl.sessiondemo.AddScreenAction"  method="showAddScreen">
+	      <result name="success">/add.jsp</result>
+	      <result name="error">/login.jsp</result>
+	      </action>
+	      <action name="addEmp" class="com.bmpl.sessiondemo.LoginAction" method="saveEmp">
+	      <result name="success">/addresult.jsp</result>
+	      </action>
+	        
+	    </package>
+	</struts>
